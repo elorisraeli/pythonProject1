@@ -176,7 +176,7 @@
 # print(f"The numbers are: \n {nums[0:10]} \n "
 #       f"{nums[10:20]} \n {nums[20:30]} "
 #       f"\n {nums[30:40]} \n {nums[40:51]}")
-
+#
 # # Exercise 'Pass': ---Number 6 in cube---
 # import random
 #
