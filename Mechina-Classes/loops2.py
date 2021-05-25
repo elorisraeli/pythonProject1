@@ -4,7 +4,7 @@ for x in range(5):
         if y == 0:
             print(int(x))
         else:
-            print(x + (y * 0.1))
+            print(round(x + (y * 0.1), 1))
 
 # Exercise: ---Number 6 in cube---
 import random
