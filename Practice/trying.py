@@ -43,3 +43,7 @@ b = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']
 # delete from element 2 to 3 (not included last(element 4))
 del b[1:3]
 print(b)
+
+# All str functions option - using dir
+str1 = 'This is a lovely day'
+print(dir(str1))
