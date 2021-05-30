@@ -10,7 +10,7 @@
 # print(f"The string now is: {line}")
 
 # # Option 2: -Without built method-
-# (looking for ascii numbers to use it later)
+# # (looking for ascii numbers to use it later)
 # import string
 #
 # for i in string.ascii_lowercase:
