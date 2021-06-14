@@ -39,3 +39,31 @@ def myFun(str):
 
 
 print(myFun("ani ohev otach"))
+
+# Option 4: Teacher way :)
+str1 = 'ani ohev otach'
+str2 = 'aeiou'
+str3 = ''
+
+for i in str1:
+    str3 += i
+    for j in str2:
+        if i == j:
+            str3 += 'b' + i
+            break
+
+print(str3)
+
+# Option 5: Teacher way :)
+str1 = 'ani ohev otach'
+str2 = 'aeiou'
+str3 = ''
+
+for i in str1:
+    str3 += i
+    if i in str2:
+        str3 += 'b' + i
+
+
+print(str3)
+
