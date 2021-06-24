@@ -4,8 +4,11 @@ print(type(input_file))
 # # Option 1: read all data in the file
 # lyrics = input_file.read()
 # print(lyrics)
-# Option 2: read line by line the data in the file
-lyrics2 = None
-while lyrics2 != '':
-    lyrics2 = input_file.readline()
-    print(lyrics2, end='')
+# # Option 2: read line by line the data in the file
+# lyrics2 = None
+# while lyrics2 != '':
+#     lyrics2 = input_file.readline()
+#     print(lyrics2, end='')
+# Option 3: read data simply line by line from file
+for line in input_file:
+    print(line, end='')
