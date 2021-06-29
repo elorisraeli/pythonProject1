@@ -45,7 +45,10 @@ solved_text = ""
 with open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/mathQuestions.txt', 'r') as file_questions:
     for line in file_questions:
         line_values = line.split(" ")
+        # option 1:
         line_values[2] = line_values[2].replace("\n", "")
+        # options 2: in the print option to write:
+        # print(sentence_join, end='')
         # check if it is a valid math problem
         if line_values[0].isdigit() and line_values[2].isdigit():
             line_values.append("=")
