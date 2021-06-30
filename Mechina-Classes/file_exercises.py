@@ -27,40 +27,48 @@
 #         fp.write('\n')
 # # str(a) to write the final answer
 
-# my attempt
-def solve(num1, operator, num2):
-    if operator == "+":
-        return num1 + num2
-    elif operator == "*":
-        return num1 * num2
-    elif operator == "/":
-        return num1 / num2
-    elif operator == "-":
-        return num1 - num2
-    else:
-        return "NOT VALID OPERATOR"
+# # my attempt
+# def solve(num1, operator, num2):
+#     if operator == "+":
+#         return num1 + num2
+#     elif operator == "*":
+#         return num1 * num2
+#     elif operator == "/":
+#         return num1 / num2
+#     elif operator == "-":
+#         return num1 - num2
+#     else:
+#         return "NOT VALID OPERATOR"
+#
+#
+# solved_text = ""
+# with open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/mathQuestions.txt', 'r') as file_questions:
+#     for line in file_questions:
+#         line_values = line.split(" ")
+#         # option 1:
+#         line_values[2] = line_values[2].replace("\n", "")
+#         # options 2: in the print option to write:
+#         # print(sentence_join, end='')
+#         # check if it is a valid math problem
+#         if line_values[0].isdigit() and line_values[2].isdigit():
+#             line_values.append("=")
+#             line_values.append(str(solve(int(line_values[0]), line_values[1], int(line_values[2]))))
+#             print(line_values)
+#             sentence_join = " ".join(line_values)
+#             print(sentence_join)
+#             solved_text = f"{solved_text} \n {sentence_join}"
+#         else:
+#             MESSAGE = "NOT A REAL MATH PROBLEM"
+#             solved_text = f"{solved_text} \n {line} = {MESSAGE}"
+#
+#
+# with open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/mathSolutions.txt', 'w') as file_answers:
+#     file_answers.write(solved_text)
 
-
-solved_text = ""
-with open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/mathQuestions.txt', 'r') as file_questions:
-    for line in file_questions:
-        line_values = line.split(" ")
-        # option 1:
-        line_values[2] = line_values[2].replace("\n", "")
-        # options 2: in the print option to write:
-        # print(sentence_join, end='')
-        # check if it is a valid math problem
-        if line_values[0].isdigit() and line_values[2].isdigit():
-            line_values.append("=")
-            line_values.append(str(solve(int(line_values[0]), line_values[1], int(line_values[2]))))
-            print(line_values)
-            sentence_join = " ".join(line_values)
-            print(sentence_join)
-            solved_text = f"{solved_text} \n {sentence_join}"
-        else:
-            MESSAGE = "NOT A REAL MATH PROBLEM"
-            solved_text = f"{solved_text} \n {line} = {MESSAGE}"
-
-
-with open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/mathSolutions.txt', 'w') as file_answers:
-    file_answers.write(solved_text)
+# Exercise Printer: ---Get file and read his data to screen without errors---
+try:
+    # file_name = "r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/fileWithText.txt'"
+    file1 = open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/fileWithText.txt', 'r')
+    print(file1.read())
+except:
+    print(f"The directory of file is not found")
