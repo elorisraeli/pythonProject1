@@ -11,7 +11,7 @@
 #     print(f"File 2: {writen_line}", end='')
 
 
-# Exercise 'Lazy student': ---Questions in file and questions with answers to another file---
+# # Exercise 'Lazy student': ---Questions in file and questions with answers to another file---
 
 # # internet boy attempt (if the questions with '=' in the end (not our case))
 # with open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/questions.txt') as fp:
