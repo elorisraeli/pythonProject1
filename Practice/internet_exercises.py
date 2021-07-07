@@ -1,5 +1,5 @@
 # Exercise Palindrome: ---Check if word is palindrome (write back the same like usual)---
-word = input("Enter a word for check:")
+word = input("Enter a word for check:").lower()
 isPal = False
 i = 0
 while i < len(word)/2:
