@@ -53,10 +53,11 @@ def is_perfect(num):
             lst.append(i)
             total += i
     if num == total:
-        return f"{num} is a perfect number!!!"
+        return True
     else:
-        return f"{num} is NOT perfect number"
+        return False
 
 
-for x in range(1, 1000):
-    print(is_perfect(x))
+for x in range(1, 10000):
+    if is_perfect(x):
+        print(x)
