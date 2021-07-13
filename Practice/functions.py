@@ -39,3 +39,24 @@ def sum_list(lst):
 
 
 print(sum_list([1, 3, 100, 7]))
+
+
+# Example 4: Perfect Number:
+# A perfect number is a positive integer that is equal to the sum of its
+# proper positive divisors, that is, the sum of its positive divisors excluding the number itself.
+# examples: 6 is perfect number -> 1+2+3 = 6, also 28 perfect number -> 1+2+4+7+14 = 28
+def is_perfect(num):
+    lst = []
+    total = 0
+    for i in range(1, num):
+        if num % i == 0:
+            lst.append(i)
+            total += i
+    if num == total:
+        return f"{num} is a perfect number!!!"
+    else:
+        return f"{num} is NOT perfect number"
+
+
+for x in range(1, 1000):
+    print(is_perfect(x))
