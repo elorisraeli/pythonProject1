@@ -50,14 +50,50 @@
 #     print(f"You Lose \n Lotto winner numbers are: {win_numbers}")
 
 
-# Exercise 5: ---Sum numbers from txt file---
-total = 0
-with open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/numbers.txt', 'r') as file_nums:
-    for line in file_nums:
-        nums_list = line.split(" ")
-        for num in nums_list:
-            if num.isdigit():
-                total += int(num)
-        nums_list.clear()
-print(f"The sum of all the numbers in the file is: {total}")
+# # Exercise 5: ---Sum numbers from txt file---
+# total = 0
+# with open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/numbers.txt', 'r') as file_nums:
+#     for line in file_nums:
+#         nums_list = line.split(" ")
+#         for num in nums_list:
+#             if num.isdigit():
+#                 total += int(num)
+#         nums_list.clear()
+# print(f"The sum of all the numbers in the file is: {total}")
 
+
+# Exercise 6: ---Count each number in list---
+# option 1: -save in list-
+def count_each(lst):
+    new_list = []
+    # check if the object we got it list
+    if isinstance(lst, list):
+        for num in lst:
+            # add the count of the number to new list
+            new_list.append(lst.count(num))
+            # remove all the number locations from original list
+            for i in lst:
+                if i == num:
+                    lst.remove(i)
+    return new_list
+
+
+print(count_each([0, 5, 5, 4, 3, 2, 3, 5, 7, 8, 2, 2, 9]))
+
+
+# option 2: -save in dictionary-
+def count_each2(lst):
+    count_dict = {}
+    # check if the object we got it list
+    if isinstance(lst, list):
+        for num in lst:
+            # add the count of the number to new list
+            count_dict[num] = lst.count(num)
+            # remove all the number locations from original list
+            for i in lst:
+                if i == num:
+                    lst.remove(i)
+    return count_dict
+
+
+print(count_each2([0, 5, 5, 4, 3, 2, 3, 5, 7, 8, 2, 2, 9]))
