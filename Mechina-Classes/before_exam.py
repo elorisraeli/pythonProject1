@@ -62,38 +62,56 @@
 # print(f"The sum of all the numbers in the file is: {total}")
 
 
-# Exercise 6: ---Count each number in list---
-# option 1: -save in list-
-def count_each(lst):
-    new_list = []
-    # check if the object we got it list
+# # Exercise 6: ---Count each number in list---
+# # option 1: -save in list-
+# def count_each(lst):
+#     new_list = []
+#     # check if the object we got it list
+#     if isinstance(lst, list):
+#         for num in lst:
+#             # add the count of the number to new list
+#             new_list.append(lst.count(num))
+#             # remove all the number locations from original list
+#             for i in lst:
+#                 if i == num:
+#                     lst.remove(i)
+#     return new_list
+#
+#
+# print(count_each([0, 5, 5, 4, 3, 2, 3, 5, 7, 8, 2, 2, 9]))
+#
+#
+# # option 2: -save in dictionary-
+# def count_each2(lst):
+#     count_dict = {}
+#     # check if the object we got it list
+#     if isinstance(lst, list):
+#         for num in lst:
+#             # add the count of the number to new list
+#             count_dict[num] = lst.count(num)
+#             # remove all the number locations from original list
+#             for i in lst:
+#                 if i == num:
+#                     lst.remove(i)
+#     return count_dict
+#
+#
+# print(count_each2([0, 5, 5, 4, 3, 2, 3, 5, 7, 8, 2, 2, 9]))
+
+
+# Exercise 7: ---Check valid list with only int type---
+def check_list(lst):
     if isinstance(lst, list):
-        for num in lst:
-            # add the count of the number to new list
-            new_list.append(lst.count(num))
-            # remove all the number locations from original list
-            for i in lst:
-                if i == num:
-                    lst.remove(i)
-    return new_list
+        for i in lst:
+            try:
+                if i >= 0:
+                    print(i)
+                else:
+                    print("This number is out of range (under zero)")
+            except ValueError:
+                print("This is ValueError type")
+            except TypeError:
+                print("This is TypeError type, index in list is not an int..")
 
 
-print(count_each([0, 5, 5, 4, 3, 2, 3, 5, 7, 8, 2, 2, 9]))
-
-
-# option 2: -save in dictionary-
-def count_each2(lst):
-    count_dict = {}
-    # check if the object we got it list
-    if isinstance(lst, list):
-        for num in lst:
-            # add the count of the number to new list
-            count_dict[num] = lst.count(num)
-            # remove all the number locations from original list
-            for i in lst:
-                if i == num:
-                    lst.remove(i)
-    return count_dict
-
-
-print(count_each2([0, 5, 5, 4, 3, 2, 3, 5, 7, 8, 2, 2, 9]))
+check_list([3, 4, 6, 7, 8, ":rg", 453, "fger", -35, -76])
