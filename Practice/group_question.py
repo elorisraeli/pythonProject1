@@ -32,30 +32,3 @@ def histogram(sentence):
 histogram("aba ima")
 
 histogram("asd fvadf sdf adf")
-
-
-# if flag:
-#         dictionary_chars = {}
-#         # run of all chars in string
-#         for character in sentence:
-#             # not including the spaces and check if char not already in dictionary
-#             if (not character == " ") and (not character in dictionary_chars.keys()):
-#                 # add to dictionary the char and how much times it appear in string
-#                 dictionary_chars[character] = sentence.count(character)
-#                 # clean from string all the appearances of the char
-#                 for i in sentence:
-#                     if i == character:
-#                         sentence = sentence.replace(character, '')
-#         print(dictionary_chars)
-#         # create new dictionary to print nicely
-#         new_dictionary = {}
-#         # get the max value from the values in first dictionary
-#         max_values = max(dictionary_chars.values())
-#         while max_values != 0:
-#             abc_lowers = string.ascii_lowercase
-#             # for lower
-#             # new_dictionary['sentence_*'] =
-#         # print(string.ascii_lowercase)
-#
-#
-# histogram("asd fvadf sdf adf")
