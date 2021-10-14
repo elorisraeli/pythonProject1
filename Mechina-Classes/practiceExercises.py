@@ -50,3 +50,29 @@
 #     print(f"We can fill {taxis_num} taxis, but we stay in station {passengers_in_station} passengers.")
 
 
+# def magic(a, b):
+#     return a * b
+#
+#
+# list_one = [1, 2, -5, 6]
+# list_two = [2, -1, 3, 4]
+# print(list(map(magic, list_one, list_two)))
+
+
+# def func(x):
+#     return x % 2 != 0
+#
+#
+# print(list(filter(func, range(10))))
+
+import functools
+
+
+def f(a, b):
+    if a < b:
+        return a
+    else:
+        return b
+
+
+print(functools.reduce(f, [47, 11, 42, 102, 13]))

@@ -1,6 +1,6 @@
 # Exercise Excel: ---Read specific data from the specific column from a csv file---
 from csv import reader
-opened_file = open(r'C:\Users\Elor Israeli\Desktop\מבוא למחשבים\homework/AppleStore.csv', encoding="utf8")
+opened_file = open(r'C:\Users\Elor Israeli\Desktop\כל מיני\מכינה למדעי המחשב\מבוא למחשבים\homework\AppleStore.csv', encoding="utf8")
 read_file = reader(opened_file)
 apps_data = list(read_file)
 # print(apps_data[1][11])

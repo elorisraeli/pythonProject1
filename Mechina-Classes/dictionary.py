@@ -20,10 +20,10 @@ for s in shopping_cart.keys():
     for p in prices.keys():
         if s == p:
             total += shopping_cart[s] * prices[p]
-    # if s not in prices.keys():
-    #     print(f"The item '{s}' is not exist, sorry.")
-    if prices.get(s, -1) == -1:
+    if s not in prices.keys():
         print(f"The item '{s}' is not exist, sorry.")
+    # if prices.get(s, -1) == -1:
+    #     print(f"The item '{s}' is not exist, sorry.")
 print(f"The total of your shopping is: {total}")
 
 
